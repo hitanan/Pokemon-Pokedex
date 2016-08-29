@@ -20,18 +20,11 @@ if (chrome.extension) {
 				$("#pokeimage").show("fast"); 
 			} 
 			
-			$.ajax(url,
+			/*$.ajax(url,
 			{
-				/*statusCode: {
-					200: function() {
-						$('#pokeimage').attr('src', pokeImage).show("fast");
-						sendResponse({});
-					}
-				},*/
+
 				success: function (response) {  
-					//var pokeHtml = $.parseHTML(response); 
-					// $('body:not(:has(div#chrome-pokeinfo))').prepend($(pokeHtml).find('#dex-evolution').next());
-					//$('body:not(:has(iframe#chrome-pokeinfo))').prepend('<iframe id="chrome-pokeinfo" src="' +url +'"></iframe>');
+
 					
 					if (!isPokemon(msg.pokename)) {
 						// show image
@@ -54,6 +47,7 @@ if (chrome.extension) {
 					sendResponse({});
 				}
 			});	
+			*/
 			
 			
 			
