@@ -1,0 +1,34 @@
+{
+	"name": "Pokemon Go Tool",
+	"author": "An Nguyen",
+	"description": "Pokemon Go Tool",
+	"version": "1.0",
+	"permissions": ["contextMenus", "tabs", "clipboardRead", "storage"],
+	"icons": {
+		"16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+	},
+	"background": { "scripts": ["background.js"],"persistent": false },
+	"browser_action": {
+	   "default_icon": {
+			"19": "icon.png",
+			"38": "icon.png"
+		},
+		"default_title": "Pokemon info",
+		"default_popup": "brower_action.html"
+	},	
+	"options_page": "options.html",
+	"options_ui": {
+		"chrome_style": true,
+		"page": "options.html"
+	},
+	"content_scripts": [{
+		"matches": ["<all_urls>"],
+		"js": ["jquery.min.js", "popup.js"],
+		"css": ["popup.css"]
+	}],
+	"web_accessible_resources": [ "/*"],
+	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+	"manifest_version": 2
+}
