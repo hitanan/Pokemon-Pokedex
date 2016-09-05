@@ -10,7 +10,7 @@ if (chrome.extension) {
 		if (msg.action == 'pokemon') {
 			
 			var pokeImage = 'https://img.pokemondb.net/artwork/' +msg.pokename+ '.jpg';
-			var url = 'http://pokemondb.net/pokedex/' + msg.pokename+'#dex-basics';
+			var url = 'https://pokemondb.net/pokedex/' + msg.pokename+'#dex-basics';
 			
 			if (isPokemon(msg.pokename)) {
 				if ($('body > #pokeimage').length > 0) {
@@ -20,7 +20,7 @@ if (chrome.extension) {
 				$("#pokeimage").show("fast"); 
 			} 
 			
-			/*$.ajax(url,
+			$.ajax(url,
 			{
 
 				success: function (response) {  
@@ -46,8 +46,7 @@ if (chrome.extension) {
 					
 					sendResponse({});
 				}
-			});	
-			*/
+			});
 			
 			
 			
