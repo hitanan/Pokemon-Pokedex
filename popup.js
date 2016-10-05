@@ -20,7 +20,7 @@ if (chrome.extension) {
 				$("#pokeimage").show("fast"); 
 			} 
 			
-			/*$.ajax(url,
+			$.ajax(url,
 			{
 
 				success: function (response) {  
@@ -47,7 +47,7 @@ if (chrome.extension) {
 					sendResponse({});
 				}
 			});	
-			*/
+			
 			
 			
 			

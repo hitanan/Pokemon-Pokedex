@@ -3,7 +3,7 @@ body > #chrome-pokeinfo{
 	display: none;
 	max-width: 1180px; max-height: 768px;
 	width:90%; height: 90%;
-	position: absolute;
+	position: fixed;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -17,7 +17,7 @@ body > #chrome-pokeinfo{
 body > iframe#chrome-pokeinfo:before, body > iframe#chrome-pokeinfo:after
 {
     content:"";
-    position:absolute;
+    position:fixed;
     z-index:-1;
     -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
     -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
@@ -45,7 +45,7 @@ body > iframe#chrome-pokeinfo:after
 	
 	display: none;
 	max-height: 400px; max-width: 400px;
-	position: absolute;
+	position: fixed;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
