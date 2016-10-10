@@ -1,5 +1,4 @@
 $(function(){
-
     currencies = [
         { value: 'Mewtwo', data: '150' },
         { value: 'Dragonite', data: '149' },
@@ -183,6 +182,7 @@ $(function(){
                 // Save to storage
                 chrome.storage.local.set(pokemons, function() {
                     createTab( PATTERN +suggestion.data +'#movesets', PATTERN);					
+
                 });
             });
             
@@ -205,6 +205,7 @@ $(function(){
         for (var i = 0; i < pokemons.ids.length; i++) {
 			var name = getName(pokemons.ids[i]);
             recentPokemons += '<li><div class="pokemon-id"><img src="https://img.pokemondb.net/artwork/' + name.toLowerCase() +'.jpg" style="height: 100%; width: 100%; object-fit: contain"></div><a href="' +PATTERN +pokemons.ids[i] +'#movesets" target="_blank"><strong>' + pokemons.ids[i] +'. '+ name + '</strong></a></li>';
+
         }
         recentPokemons += "</ul>";
         $('#recentPokemons').html(recentPokemons);
@@ -212,6 +213,7 @@ $(function(){
 
     // Auto focus
     $('#autocomplete').focus();
+
 
 
 	function getName(id) {
@@ -225,23 +227,7 @@ $(function(){
 		return idx > -1 ? currencies[idx].value : '';
 	}
 	
-	/*function getPokemonName(ids) {
-		var names = [];
-		var idx = 0;
-		for (var i = 0, len = currencies.length; i < len && idx < ids.length; i++) {
-			
-			// console.log(currencies[i].data + ", " + ids[idx]);
-			
-			if (ids.indexOf(currencies[i].data) > -1) {
-				
-				//console.log("found, "+ currencies[i].value);
-				names.push(currencies[i].value);
-				idx++;
-			}
-		}
-		return names;
-	}*/
-	
+
     // create new or updated tab
     function createTab(url, PATTERN) {
         chrome.tabs.query({currentWindow: true}, function (tabs) {
@@ -256,6 +242,7 @@ $(function(){
                         url: url
                     });
                     window.close();
+
                     break;
                 }
                 
@@ -267,6 +254,7 @@ $(function(){
                     url: url
                 });
                 window.close();
+
             }
 
         });
